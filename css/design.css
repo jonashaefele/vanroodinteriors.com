@@ -1,0 +1,344 @@
+/*
+apply a natural box layout model to all elements, but allowing components to change
+http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*/
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: url(../images/paper_x1.jpg);
+  background-repeat: repeat;
+  font-family: "Averta", sans-serif;
+  padding: 5px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* retina images */
+  body {
+    background: url(../images/paper_x2.png);
+    background-size: 319px 319px;
+  }
+}
+
+.intro {
+  padding: 50px 24px 0 24px;
+}
+
+a.logo-link,
+a.logo-link:link,
+a.logo-link:hover,
+a.logo-link:visited,
+a.logo-link:active {
+  text-decoration: none;
+  position: fixed;
+  top: 30px;
+  left: 24px;
+  opacity: 0.9;
+}
+
+.logo {
+  display: block;
+  font-size: 40px;
+  color: #e54839;
+  font-family: "QuincyCF-BoldItalic", Helvetica, Arial, Sans-Serif;
+  line-height: 1;
+  margin: 0;
+}
+
+/* Styles for the About Navigation links */
+
+.about-nav {
+  margin-top: 2em;
+}
+
+.about-nav .about-link {
+  display: block;
+}
+
+.about-nav.about-active .about-link {
+  display: none;
+}
+
+.about-nav .projects-link {
+  display: none;
+}
+
+.about-nav.about-active .projects-link {
+  display: block;
+}
+
+.about-nav a,
+.about-nav a:link,
+.about-nav a:hover,
+.about-nav a:visited,
+.about-nav a:active {
+  font-size: 12px;
+  font-weight: 600;
+  color: #000;
+  text-decoration: none;
+  width: 100%;
+  float: left;
+  margin: 5px 0;
+}
+
+.about-nav a:hover {
+  text-decoration: underline;
+}
+
+.about a,
+.about a:link,
+.about a:hover,
+.about a:visited,
+.about a:active {
+  font-weight: 600;
+  color: #000;
+  text-decoration: none;
+}
+
+.about a:hover {
+  text-decoration: underline;
+}
+
+.about-nav a.contact-icon,
+.about-nav a:link.contact-icon,
+.about-nav a:hover.contact-icon,
+.about-nav a:visited.contact-icon,
+.about-nav a:active.contact-icon {
+  display: inline-block;
+  width: auto;
+}
+.contact-icon img {
+  height: 22px;
+  margin-right: 8px;
+}
+
+.subhead {
+  color: #979797;
+  font-weight: 300;
+  margin: 10px 0 0 0;
+}
+
+/* This is a comment. Use dot before title (eg work-samples) to make the link.*/
+.work-samples,
+.about {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.work-samples article {
+  width: 100%;
+  margin: 15px auto 0 auto;
+  /*background: rgba(255, 255, 255, 0);*/
+  float: left;
+  cursor: pointer;
+}
+
+.coming-soon {
+  opacity: 0.25;
+}
+.coming-soon *,
+.coming-soon a {
+  pointer-events: none !important;
+}
+.coming-soon h1,
+.coming-soon p {
+  color: #aaa;
+}
+
+.work-samples a,
+.work-samples a:link,
+.work-samples a:hover,
+.work-samples a:active .work-samples a:visited {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.work-title {
+  font-family: "Averta", sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  margin-bottom: 0.15em;
+  text-decoration: none;
+  color: #000;
+}
+
+.work-detail {
+  font-family: "Averta", sans-serif;
+  font-weight: 300;
+  font-size: 10px;
+  margin-top: 0;
+  text-decoration: none;
+  color: #000;
+}
+
+.work-desc {
+  display: none;
+}
+
+.about {
+  font-family: "Averta", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  margin-top: 6.5em;
+  text-decoration: none;
+  color: #000;
+  max-width: 1100px;
+  margin-right: 2em;
+}
+.about h3 {
+  margin-top: 3em;
+  color: #323232;
+  max-width: 700px;
+  font-family: "Averta", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+}
+.about h4 {
+  color: #323232;
+  max-width: 700px;
+  font-family: "Averta", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.about h5 {
+  color: #6d6d6d;
+  max-width: 700px;
+  font-family: "Averta", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  margin-top: 0;
+}
+
+article img {
+  max-width: 100%;
+}
+
+.desc-holder {
+  display: none;
+}
+/*
+}
+@media = command / talk to brower
+    ask the browser if the screen/window it is a minumum of 400px wide (at leat 400px, or more)
+    only apply these styles if you're 400px or more
+  */
+@media (min-width: 600px) {
+  .work-samples article {
+    width: 270px;
+    margin: 10px 10px 0 0;
+  }
+}
+
+/*
+    ask the browser if the screen/window is a minumum of 1000px wide (at leat 1000px, or more)
+    only apply these styles if you're 1000px or more
+  */
+@media (min-width: 1000px) {
+  .desc-holder {
+    display: block;
+    min-height: 64vh;
+  }
+  .intro {
+    width: 380px;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .logo-link {
+    top: 60px;
+    left: 35px;
+  }
+
+  .logo {
+    font-size: 95px;
+  }
+
+  .intro {
+    padding: 150px 45px 0 45px;
+  }
+
+  .work-samples {
+    color: #323232;
+    font-family: "Averta", sans-serif;
+    font-weight: 900;
+    font-size: 10px;
+    padding-top: 175px;
+    width: 62%;
+    margin-left: 380px;
+  }
+  .about {
+    color: #323232;
+    font-family: "Averta", sans-serif;
+    font-size: 14px;
+    padding-top: 0px;
+    width: 62%;
+    margin-left: 380px;
+  }
+  .intro .work-desc {
+    color: #323232;
+    display: block;
+    font-family: "Averta", sans-serif;
+    font-weight: 200;
+    font-size: 12px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+@media (min-width: 1530px) {
+  .work-samples {
+    width: 75%;
+  }
+}
+@media (min-width: 1950px) {
+  .work-samples {
+    width: 80%;
+  }
+}
+
+/* make suer work detial pages don't get too wide, stop at 1400px */
+.work-samples.detail {
+  max-width: 1400px;
+}
+/* make all images on the detail page wide */
+.work-samples.detail img {
+  width: 100%; /* scale the images to full width of the column */
+  margin-bottom: 25px; /* add space between the images as thesy stack */
+}
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ *
+ * Found at http://nicolasgallagher.com/micro-clearfix-hack/
+ */
+.cf:before,
+.cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+  *zoom: 1;
+}
