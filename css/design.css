@@ -30,6 +30,17 @@ body {
   padding: 50px 24px 0 24px;
 }
 
+
+/* this styles the intro heading 3*/
+.intro h3 {
+  color: #323232;
+  max-width: 700px;
+  font-family: 'Averta', sans-serif;
+  font-weight:600;
+  font-size: 24px;
+  padding-top: 0px
+}
+
 a.logo-link,
 a.logo-link:link,
 a.logo-link:hover,
