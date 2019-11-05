@@ -35,9 +35,9 @@ body {
 .intro h3 {
   color: #323232;
   max-width: 700px;
-  font-family: 'Averta', sans-serif;
+  font-family: 'QuincyCF-BoldItalic', sans-serif;
   font-weight:600;
-  font-size: 24px;
+  font-size: 20px;
   padding-top: 0px
 }
 
@@ -216,7 +216,7 @@ a.logo-link:active {
   max-width: 700px;
   font-family: "Averta", sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 18px;
   margin-bottom: 0;
 }
 .about h5 {

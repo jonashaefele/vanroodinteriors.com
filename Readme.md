@@ -11,7 +11,7 @@ cd
 (and space), and drag the Folder in the window, hit enter.
 
 Type:
-python -m SimpleHTTPServer
+python -m SimpleHTTPServer 8001
 and hit enter.
 
 In your browser, go to
