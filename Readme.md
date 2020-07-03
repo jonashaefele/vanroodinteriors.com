@@ -15,7 +15,7 @@ python -m SimpleHTTPServer 8001
 and hit enter.
 
 In your browser, go to
-localhost:8000
+localhost:8001
 
 ### Commit your changes
 
