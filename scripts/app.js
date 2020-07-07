@@ -36,7 +36,7 @@ $(function() {
   });
 
   // Capture all the links to push their url to the history stack and trigger the StateChange Event
-  $("article:not(.coming-soon, .about) a, .intro a").click(function(evt) {
+  $(".js-internal-link").click(function(evt) {
     evt.preventDefault();
     console.log("clicked on ", evt.target);
     History.pushState(null, $(this).text(), $(this).attr("href"));
