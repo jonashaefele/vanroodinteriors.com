@@ -76,8 +76,13 @@ a.logo-link:active {
   /* color: #f85a3b; */
 }
 
-.about-nav.projects-active .projects-link {
+.about-nav .projects-link {
   display: none;
+  /* color: #f85a3b; */
+}
+
+.about-nav.about-active .projects-link {
+  display: block;
   /* color: #f85a3b; */
 }
 
