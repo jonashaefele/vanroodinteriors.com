@@ -72,13 +72,13 @@ a.logo-link:active {
 }
 
 .about-nav.about-active .about-link {
-  /* display: none; */
-  color: #f85a3b;
+  display: none;
+  /* color: #f85a3b; */
 }
 
 .about-nav.projects-active .projects-link {
-  /* display: none; */
-  color: #f85a3b;
+  display: none;
+  /* color: #f85a3b; */
 }
 
 .about-nav a,
