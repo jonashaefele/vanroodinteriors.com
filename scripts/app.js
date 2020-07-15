@@ -5,10 +5,8 @@ $(function() {
    */
 
   function hashHandler(event) {
-    console.log("The hash has changed!", event);
-
     var newHash = location.hash.substr(1);
-    console.log(newHash);
+    console.log("Hash changed to ", newHash);
 
     if (newHash == "about") {
       $(".about-nav").addClass("about-active");
