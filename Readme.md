@@ -19,7 +19,7 @@ localhost:8000
 
 ### Commit your changes
 
-When you made some significant changes, and at the end of every day you worked on the website, open the Github Desktop app, under `uncommitted changes`, select all files and add a comment to explain what you changed, then hit `Commit to master`.
+When you made some significant changes, and at the end of every day you worked on the website, open the Github Desktop app, under `uncommitted changes`, select all files and add a comment to explain what you changed, then hit `Commit to gh-pages`.
 
 Then hit the `Publish` button in the top right corner to sync your changes to GitHub.
 
