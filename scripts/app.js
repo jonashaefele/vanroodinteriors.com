@@ -1,49 +1,59 @@
 $(function() {
-  // hide detail container
-  $("#detail").hide();
-  var loadingMessage = $("#detail").html();
+  /*
+   * The following code loads any of the detail pages
+   * - it works by changing the hash (#) in the URL and then loading the corresponding page from the /details folder.
+   */
 
-  // Bind to StateChange Event
-  History.Adapter.bind(window, "statechange", function() {
-    // Note: We are using statechange instead of popstate
-    var State = History.getState();
-    // $('#content').load(State.url);
-    // Instead of the line above, you could run the code below if the url returns the whole page instead of just the content (assuming it has a `#content`):
-    if (State.url.indexOf("detail") >= 0) {
-      $("#teasers, #about").fadeOut(300, function() {
-        console.log("loading details for", State.url);
-        $("#detail").load(State.url + " #ajax-detail", function() {
-          $("#detail").fadeIn(800);
-        });
-      });
-      $(".about-nav").removeClass("about-active");
-    } else if (State.url.indexOf("about") >= 0) {
-      $("#teasers, #details").fadeOut(300, function() {
-        $(".desc-holder").html("");
-        $("#about").load(State.url + " #ajax-detail", function() {
-          $("#about").fadeIn(800);
-        });
-        $(".about-nav").addClass("about-active");
-      });
+  function hashHandler(event) {
+    console.log("The hash has changed!", event);
+
+    var newHash = location.hash.substr(1);
+    console.log(newHash);
+
+    if (newHash == "about") {
+      $(".about-nav").addClass("about-active");
+      hideDetails();
     } else {
-      console.log("not a detial page");
-      $("#detail, #about")
-        .html(loadingMessage)
-        .fadeOut(800);
-      $("#teasers").fadeIn(800);
       $(".about-nav").removeClass("about-active");
     }
-  });
 
-  // Capture all the links to push their url to the history stack and trigger the StateChange Event
-  $(".js-internal-link").click(function(evt) {
-    evt.preventDefault();
-    console.log("clicked on ", evt.target);
-    History.pushState(null, $(this).text(), $(this).attr("href"));
-  });
+    if (newHash == "projects") {
+      $(".about-nav").addClass("projects-active");
+    } else {
+      $(".about-nav").removeClass("projects-active");
+    }
 
-  /* look at all work-samples articles and display details on hover */
-  /* take all articles and for each of then watch if the mouse hovers over it*/
+    switch (newHash) {
+      case "projects":
+        // load project overview
+        hideDetails();
+        $("#detail")
+          .html(loadingMessage)
+          .fadeOut(800);
+        $("#teasers").fadeIn(800);
+        break;
+
+      default:
+        // load details page
+        $("#teasers").fadeOut(300, function() {
+          console.log("loading details for", newHash);
+          $("#detail").load("/details/" + newHash + ".html", function(e) {
+            $("#detail").fadeIn(800);
+          });
+        });
+        break;
+    }
+  }
+
+  // this is what makes is "active"
+  window.addEventListener("hashchange", hashHandler, false);
+
+  /*
+   * The following code makes the hover effect over the thumbnails work.
+   * - look at all work-samples articles and display details on hover
+   * - take all articles and for each of then watch if the mouse hovers over it
+   */
+
   $(".work-samples article:not(.coming-soon)").each(function() {
     $(this).hover(showDetails, hideDetails);
   });
@@ -64,9 +74,24 @@ $(function() {
   }
 
   function hideDetails(event) {
-    var State = History.getState();
-    if (State.url.indexOf("detail") < 0) {
+    if (location.hash == "#projects" || location.hash == "#about") {
       $(".desc-holder").html("");
     }
   }
+
+  /*
+   * The following code initialises the page
+   * - hide the detail container
+   * - add the '#projects' hash if there is no hash (user navigated to the homepage)
+   * - it loads the content for the hash (if we have one)
+   */
+
+  // hide detail container
+  $("#detail").hide();
+  var loadingMessage = $("#detail").html();
+
+  if (location.hash.length == 0) {
+    location.hash = "#projects";
+  }
+  hashHandler("init page");
 });

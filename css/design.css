@@ -26,20 +26,18 @@ body {
   }
 }
 
-
 .intro {
   padding: 50px 24px 0 24px;
 }
-
 
 /* this styles the intro heading 3*/
 .intro h3 {
   color: #393939;
   max-width: 700px;
-  font-family: 'QuincyCF-BoldItalic', sans-serif;
-  font-weight:600;
+  font-family: "QuincyCF-BoldItalic", sans-serif;
+  font-weight: 600;
   font-size: 20px;
-  padding-top: 0px
+  padding-top: 0px;
 }
 
 a.logo-link,
@@ -74,15 +72,13 @@ a.logo-link:active {
 }
 
 .about-nav.about-active .about-link {
-  display: none;
+  /* display: none; */
+  color: #f85a3b;
 }
 
-.about-nav .projects-link {
-  display: none;
-}
-
-.about-nav.about-active .projects-link {
-  display: block;
+.about-nav.projects-active .projects-link {
+  /* display: none; */
+  color: #f85a3b;
 }
 
 .about-nav a,
@@ -292,8 +288,8 @@ article img {
     font-family: "Averta", sans-serif;
     font-size: 14px;
     padding-top: 0px;
-    width: 62%;
-    margin-left: 380px;
+    /* width: 62%;
+    margin-left: 380px; */
   }
   .intro .work-desc {
     color: #979797;
