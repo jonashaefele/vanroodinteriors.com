@@ -25,7 +25,10 @@ Then hit the `Publish` button in the top right corner to sync your changes to Gi
 
 (FC video link)
 
+```
+
 <iframe src="https://player.vimeo.com/video/59650046" width="1090" height="700" frameborder="0"></iframe>
 </div>
 
 <a href="https://player.vimeo.com/video/59650046" target="_blank">player.vimeo.com/video/59650046</a>
+```
