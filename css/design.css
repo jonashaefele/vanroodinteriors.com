@@ -93,7 +93,7 @@ a.logo-link:active {
 .about-nav a:active {
   font-size: 12px;
   font-weight: 600;
-  color: #979797;
+  color: #000;
   text-decoration: none;
   width: 100%;
   float: left;
@@ -110,7 +110,7 @@ a.logo-link:active {
 .about a:visited,
 .about a:active {
   font-weight: 600;
-  color: #979797;
+  color: #000;
   text-decoration: none;
 }
 
