@@ -32,7 +32,7 @@ body {
 
 /* this styles the intro heading 3*/
 .intro h3 {
-  color: #393939;
+  color: #979797;
   max-width: 700px;
   font-family: "QuincyCF-BoldItalic", sans-serif;
   font-weight: 600;
@@ -93,7 +93,7 @@ a.logo-link:active {
 .about-nav a:active {
   font-size: 12px;
   font-weight: 600;
-  color: #393939;
+  color: #979797;
   text-decoration: none;
   width: 100%;
   float: left;
@@ -110,7 +110,7 @@ a.logo-link:active {
 .about a:visited,
 .about a:active {
   font-weight: 600;
-  color: #393939;
+  color: #979797;
   text-decoration: none;
 }
 
@@ -132,7 +132,7 @@ a.logo-link:active {
 }
 
 .subhead {
-  color: #393939;
+  color: #979797;
   font-weight: 300;
   margin: 10px 0 0 0;
 }
@@ -179,7 +179,7 @@ a.logo-link:active {
   font-size: 10px;
   margin-bottom: 0.15em;
   text-decoration: none;
-  color: #393939;
+  color: #979797;
 }
 
 .work-detail {
@@ -188,7 +188,7 @@ a.logo-link:active {
   font-size: 10px;
   margin-top: 0;
   text-decoration: none;
-  color: #393939;
+  color: #979797;
 }
 
 .work-desc {
@@ -201,20 +201,20 @@ a.logo-link:active {
   font-size: 14px;
   margin-top: 6.5em;
   text-decoration: none;
-  color: #393939;
+  color: #979797;
   max-width: 1100px;
   margin-right: 2em;
 }
 .about h3 {
   margin-top: 3em;
-  color: #393939;
+  color: #979797;
   max-width: 700px;
   font-family: "Averta", sans-serif;
   font-weight: 600;
   font-size: 14px;
 }
 .about h4 {
-  color: #393939;
+  color: #979797;
   max-width: 700px;
   font-family: "Averta", sans-serif;
   font-weight: 500;
@@ -222,7 +222,7 @@ a.logo-link:active {
   margin-bottom: 0;
 }
 .about h5 {
-  color: #393939;
+  color: #979797;
   max-width: 700px;
   font-family: "Averta", sans-serif;
   font-weight: 300;
