@@ -27,18 +27,12 @@ body {
 }
 
 .intro {
-  padding: 50px 24px 0 24px;
+  padding: 30px 14px 0 14px;
 }
 
 /* this styles the intro heading 3*/
-.intro h3 {
-  color: #979797;
-  max-width: 700px;
-  font-family: "QuincyCF-BoldItalic", sans-serif;
-  font-weight: 600;
-  font-size: 20px;
-  padding-top: 0px;
-}
+
+
 
 a.logo-link,
 a.logo-link:link,
@@ -48,18 +42,19 @@ a.logo-link:active {
   text-decoration: none;
   position: fixed;
   top: 30px;
-  left: 24px;
+  left: 35px;
   opacity: 0.9;
 }
 
 .logo {
   display: block;
-  font-size: 40px;
+  font-size: 20px;
   color: #f85a3b;
   font-family: "QuincyCF-BoldItalic", Helvetica, Arial, Sans-Serif;
   line-height: 1;
   margin: 0;
 }
+
 
 /* Styles for the About Navigation links */
 
@@ -213,6 +208,7 @@ a.logo-link:active {
   font-weight: 600;
   font-size: 14px;
 }
+
 .about h4 {
   color: #979797;
   max-width: 700px;
@@ -272,7 +268,7 @@ article img {
   }
 
   .logo {
-    font-size: 95px;
+    font-size: 45px;
   }
 
   .intro {
