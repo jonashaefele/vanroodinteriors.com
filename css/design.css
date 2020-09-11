@@ -27,7 +27,7 @@ body {
 }
 
 .intro {
-  padding: 30px 14px 0 14px;
+  padding: 50px 24px 0 24px;
 }
 
 /* this styles the intro heading 3*/
@@ -42,13 +42,13 @@ a.logo-link:active {
   text-decoration: none;
   position: fixed;
   top: 30px;
-  left: 35px;
+  left: 20px;
   opacity: 0.9;
 }
 
 .logo {
   display: block;
-  font-size: 20px;
+  font-size: 10px;
   color: #f85a3b;
   font-family: "QuincyCF-BoldItalic", Helvetica, Arial, Sans-Serif;
   line-height: 1;
